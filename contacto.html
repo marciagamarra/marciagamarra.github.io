@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="STYLESHEET" href="estilos.css">
+    <script src="https://kit.fontawesome.com/9398df82ae.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <img src= "fondo.png" height="200" width="200" border="0">
+        <h1 >Velas de soja, aromatizadores y jabones</h1> 
+    </header>
+
+    <div id="contenedor"> 
+        <div class="item item-1">
+          <form name="fcontacto">
+            <table>
+                <tr>
+                    <td>Nombre: </td>
+                    <td><input type="text" name="nombre" size="50" maxlength="50"></td>
+                </tr>
+                <tr>
+                    <td>Teléfono: </td>
+                    <td><input type="text" name="telefono" size="50" maxlength="10" placeholder="Código de área sin 0 ni 15"></td>
+                </tr>
+                <tr>
+                    <td>Comentarios: </td>
+                    <td><textarea name="comentarios" rows="10" cols="50" placeholder="Ingrese sus comentarios"></textarea></td>
+                <tr>
+                    <td colspan="2" align="center">
+        
+                        <input type="button" value="Enviar" onclick="validacion()">
+                    </td>
+                </tr>
+            </table>
+        </form>
+       
+        
+        <script>
+            function validacion() {
+                if (document.fcontacto.nombre.value.length == 0) {
+                    alert("Ingrese su nombre")
+                    document.fcontacto.nombre.focus()
+                    return 0;
+                }
+                if (document.fcontacto.telefono.value.length !== 10) {
+                    alert("Ingrese su teléfono")
+                    document.fcontacto.telefono.focus()
+                    return 0;
+                }
+                alert("Gracias por contactarte! En breve te responderemos.");
+                document.fvalida.submit();
+            }
+        </script>
+         </div>
+        <div class="item item-2"> 
+        <p class="ubicacion">Nos encontrás en Bernal, Provincia de Buenos Aires</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13119.066340382273!2d-58.29629743022461!3d-34.71106679999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32df895a3051f%3A0x2e5d38f1d31164f!2sGuido%20Spano%20602%2C%20Bernal%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1653849562252!5m2!1ses!2sar" width="150" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+      </div> 
+        </div>
+    <footer>
+        <a class="pie" href="https://api.whatsapp.com/send?phone=541154678311"><i class="fa-brands fa-whatsapp"></i></a>
+        <a class="pie" href="https://www.instagram.com/gdeco4"><i class="fa-brands fa-instagram"></i></a>
+    </footer>
+</body>
+</html>
